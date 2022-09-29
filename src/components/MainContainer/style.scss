@@ -1,0 +1,19 @@
+@import '/src/sass/colors';
+
+.background {
+    background-color: $background-color;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+
+    > .main-container {
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 30px rgba($color: white, $alpha: 0.5);
+        outline: 1vw solid $primary-color;
+        border-radius: 5vw;
+        width: 90vw;
+        height: 50vw;
+    }
+}
