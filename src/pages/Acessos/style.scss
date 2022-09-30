@@ -9,13 +9,44 @@
         margin: 2vw;
     }
 
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
     .react-pagination-table {
        flex-direction: column;
        text-align: center;
        margin: auto;
        width: 100%;
-       font-size: 1.63vw;
+       font-size: 1.2vw;
        line-height: 2.5vw;
+       
+       thead {
+           background-color: white;
+           color: $background-color;
+           
+           th {
+               padding: 0.5vw 1vw;
+           }
+
+           th:first-of-type {
+            border-top-left-radius: 2vw;
+           }
+
+           th:last-of-type {
+            border-top-right-radius: 2vw;
+           }
+       }
+
+       tbody {
+        td {
+            width: 5vw;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+       }
 
        ul {
         display: flex;
