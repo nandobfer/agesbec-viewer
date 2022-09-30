@@ -3,6 +3,8 @@ const path = require('path');
 const { app, BrowserWindow } = require('electron');
 const isDev = require('electron-is-dev');
 
+require('./database.js')
+
 function createWindow() {
   // Create the browser window.
   const win = new BrowserWindow({
@@ -10,6 +12,8 @@ function createWindow() {
     height: 600,
     webPreferences: {
       nodeIntegration: true,
+      preload: `${path.join(__dirname, './preload.js')}`,
+      contextIsolation: true,
     },
   });
 

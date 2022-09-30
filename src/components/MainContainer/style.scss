@@ -8,10 +8,10 @@
     justify-content: center;
 
     > .main-container {
+        position: relative;
         justify-content: center;
         align-items: center;
-        box-shadow: 0 0 30px rgba($color: white, $alpha: 0.5);
-        outline: 1vw solid $primary-color;
+        box-shadow: 0 0 30px rgba($color: $primary-color, $alpha: 1);
         border-radius: 5vw;
         width: 90vw;
         height: 50vw;

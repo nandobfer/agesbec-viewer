@@ -1,7 +1,9 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.scss';
 import { MainContainer } from './components/MainContainer';
+import { Acessos } from './pages/Acessos';
 import { Home } from './pages/Home';
+import { Visitantes } from './pages/Visitantes';
 
 function App() {
   return (
@@ -9,7 +11,8 @@ function App() {
         <BrowserRouter>
             <Routes>
                     <Route index element={<Home />} />
-                    {/* <Route path='/perfil' element={<Perfil />} /> */}
+                    <Route path='/acessos' element={<Acessos />} />
+                    <Route path='/visitantes' element={<Visitantes />} />
             </Routes>
         </BrowserRouter>
     </MainContainer>
