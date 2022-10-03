@@ -1,6 +1,8 @@
 {
   "name": "agesbec-viewer",
   "version": "0.1.0",
+  "description": "Agesbec Siscomex viewer",
+  "author": "Fernando Burgos",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -65,7 +67,9 @@
   },
   "config": {
     "forge": {
-      "packagerConfig": {},
+      "packagerConfig": {
+        "packageManager": "yarn"
+      },
       "makers": [
         {
           "name": "@electron-forge/maker-squirrel",

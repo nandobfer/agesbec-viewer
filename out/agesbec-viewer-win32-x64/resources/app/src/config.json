@@ -1,0 +1,18 @@
+{
+    "database": {
+        "host": "192.168.50.3",
+        "port": "3306",
+        "user": "suporte",
+        "password": "C4ndidato01",
+        "database": "siscomex",
+        "table": "acessos"
+    },
+    "falso": {
+        "host": "127.0.0.1",
+        "port": "3306",
+        "user": "root",
+        "password": "mfux6xpj",
+        "database": "siscomex",
+        "table": "acessos"
+    }
+}

@@ -1,0 +1,70 @@
+{
+  "name": "agesbec-viewer",
+  "version": "0.1.0",
+  "description": "Agesbec Siscomex viewer",
+  "author": "Fernando Burgos",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^0.27.2",
+    "cross-env": "^7.0.3",
+    "formik": "^2.2.9",
+    "mysql": "^2.18.1",
+    "node-sass": "^7.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-loading": "^2.0.3",
+    "react-pagination-table": "^2.0.2",
+    "react-router-dom": "^6.4.1",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "main": "es6-shim.js",
+  "scripts": {
+    "start": "cross-env BROWSER=none react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "dev": "concurrently -k \"yarn start\" \"npm:electron\"",
+    "electron": "wait-on tcp:3000 && electron .",
+    "package": "react-scripts build && electron-forge package",
+    "make-mac": "react-scripts build && electron-forge make --platform darwin",
+    "make-linux": "react-scripts build && electron-forge make --platform linux",
+    "make": "react-scripts build && electron-forge make"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.66",
+    "@electron-forge/maker-deb": "^6.0.0-beta.66",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.66",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.66",
+    "@electron-forge/maker-zip": "^6.0.0-beta.66",
+    "concurrently": "^7.4.0",
+    "electron": "^21.0.1",
+    "electron-forge": "^5.2.4",
+    "electron-is-dev": "^2.0.0",
+    "electron-prebuilt-compile": "8.2.0",
+    "wait-on": "^6.0.1"
+  },
+  "config": {},
+  "originalMain": "public/electron.js"
+}
